@@ -152,5 +152,6 @@ http://localhost/order-management/public/index.php
 يمكن توسيع المشروع لاحقًا بإضافة واجهة HTML أو دعم تسجيل الدخول
 
 
+> ✨ Developed with care by Aya Barghouth – Backend Developer & Creative Thinker
 
-##$ made with lo♥e ☺ Aya Barghouth
+
