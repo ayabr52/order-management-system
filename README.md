@@ -6,6 +6,27 @@
 نظام إدارة الطلبات هو تطبيق ويب بسيط تم تطويره باستخدام **PHP بدون Laravel**، يهدف إلى إدارة طلبات العملاء والمنتجات المرتبطة بها. يعتمد المشروع على مفاهيم **البرمجة الكائنية (OOP)** و**أنماط التصميم (Design Patterns)** لضمان تنظيم الكود وسهولة الصيانة.
 
 ---------------------------------
+🖥️ Project Interface (English)
+The interface is clean and straightforward, designed to display and manage customer orders directly from the browser. When visiting index.php, users see a list of all registered orders with key details such as:
+
+Order number
+
+Customer name
+
+Total price (including VAT and shipping)
+
+Order status
+
+Each order includes its associated products, showing quantity and price per item. The system is built to be easily extendable, with future enhancements like:
+
+A form to create new orders
+
+A dedicated page for viewing order details
+
+Full CRUD support via RESTful APIs
+
+This structure reflects a strong separation of concerns, using OOP and design patterns to keep logic modular and maintainable.
+---------------------------------
 
 ## 🧱 هيكل المجلدات
 
@@ -56,6 +77,8 @@ CREATE TABLE order_logs (
   message TEXT,
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+```
+
 ///    كتابتهم في الsql ضمن القاعدة 
  
 🎯 أنماط التصميم المستخدمة
@@ -65,6 +88,29 @@ Service     	OrderService لتنفيذ منطق إنشاء الطلب وحساب
 Observer    	OrderObserver لتسجيل حدث إنشاء الطلب في order_logs
 Facade	         OrderFacade لتبسيط استدعاء الخدمات من نقطة واحدة
 Singleton	      Settings لتخزين إعدادات النظام مثل VAT وتكلفة الشحن
+
+/////////////////////////
+
+<div dir="rtl">
+
+## 🖥️ واجهة المشروع
+
+واجهة المشروع بسيطة وواضحة، مصممة لتجربة الطلبات وعرضها بشكل مباشر. عند فتح `index.php` في المتصفح، تظهر قائمة الطلبات المسجلة، مع تفاصيل مثل:
+
+- رقم الطلب
+- اسم العميل
+- السعر الإجمالي (يشمل الضريبة وتكلفة الشحن)
+- حالة الطلب
+
+كل طلب يحتوي على المنتجات المرتبطة به، مع الكمية والسعر لكل منتج.
+
+تم تصميم الواجهة لتكون قابلة للتوسعة لاحقًا، مثل:
+
+- إضافة نموذج إدخال طلب جديد
+- عرض تفاصيل كل طلب في صفحة مستقلة
+- دعم التعديل والحذف من خلال واجهات API
+
+</div>
 
 /////////////////////////
 
